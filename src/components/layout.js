@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from './Footer'
 import "../styles/index.scss"
 
 const Layout = ({ children }) => {
@@ -25,10 +26,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossOrigin="anonymous"
+      />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={"container"} id={"content"}>
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }
