@@ -1,10 +1,8 @@
 ﻿---
 title: 'react native关于style类型的属性(PropTypes)确认'
-date: 2020-05-14 17:26:12
-author: '测试2'
-image: ../../images/javascript.jpg
-tags:
-  - react
+date: 2019-10-24 11:58:15
+author: '非動ご'
+path: '/second-post'
 ---
 
 先做一下错误(❎)示范：

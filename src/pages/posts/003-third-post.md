@@ -1,10 +1,8 @@
 ﻿---
 title: 'react 无状态组件与纯组件（pureComponent）'
-date: 2020-05-14 17:27:16
-author: '测试2'
-image: ../../images/javascript.jpg
-tags:
-  - react
+date: 2018-09-20 14:18:44
+author: '非動ご'
+path: '/third-post'
 ---
 
 ## 无状态组件与纯组件（pureComponent）

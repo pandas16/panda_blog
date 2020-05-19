@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `非動的博客`,
+    title: `非動ご的博客`,
     description: `panda's blog`,
     author: `@pandas16`,
   },
