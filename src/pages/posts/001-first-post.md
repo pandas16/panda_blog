@@ -3,6 +3,8 @@ title: 'react native Text组件首行缩进'
 date: 2019-07-18 09:47:25
 author: '非動ご'
 path: '/first-post'
+tags:
+ - react
 ---
 
 中文段落一般都会有首行缩进。然而react native的Text组件并没有直接提供相关的配置属性。

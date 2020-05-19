@@ -1,8 +1,16 @@
 import React from 'react'
-import { Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap'
+import {
+  Badge,
+  Card,
+  CardTitle,
+  CardText,
+  CardSubtitle,
+  CardBody
+} from 'reactstrap'
 import { Link } from 'gatsby'
+import { slugify } from '../util/utilityFunctions'
 
-const Post = ({ title, author, path, date, body }) => (
+const Post = ({ title, author, path, date, body, tags }) => (
   <Card>
     <CardBody>
       <CardTitle>
@@ -13,11 +21,22 @@ const Post = ({ title, author, path, date, body }) => (
         <span className="text-info">{author}</span>
       </CardSubtitle>
       <CardText>{body}</CardText>
+      <ul className="post-tags">
+        {tags.map(tag => (
+          <li>
+            <Link to={`/tag/${slugify(tag)}`}>
+              <Badge color="primary">
+                {tag}
+              </Badge>
+            </Link>
+          </li>
+        ))}
+      </ul>
       <Link
         to={path}
         className="btn btn-outline-primary float-right text-uppercase"
       >
-        Read more
+        查看详情
       </Link>
     </CardBody>
   </Card>

@@ -19,6 +19,7 @@ const IndexPage = () => (
                 author={node.frontmatter.author}
                 body={node.excerpt}
                 date={node.frontmatter.date}
+                tags={node.frontmatter.tags}
               />
             ))}
           </div>
@@ -39,6 +40,7 @@ const indexQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             author
             path
+            tags
           }
           excerpt
         }
