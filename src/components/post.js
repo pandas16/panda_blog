@@ -10,11 +10,11 @@ import {
 import { Link } from 'gatsby'
 import { slugify } from '../util/utilityFunctions'
 
-const Post = ({ title, author, path, date, body, tags }) => (
+const Post = ({ title, author, slug, date, body, tags }) => (
   <Card>
     <CardBody>
       <CardTitle>
-        <Link to={path}>{title}</Link>
+        <Link to={slug}>{title}</Link>
       </CardTitle>
       <CardSubtitle>
         <span className="text-info">{date}</span> by{' '}
@@ -33,7 +33,7 @@ const Post = ({ title, author, path, date, body, tags }) => (
         ))}
       </ul>
       <Link
-        to={path}
+        to={slug}
         className="btn btn-outline-primary float-right text-uppercase"
       >
         查看详情

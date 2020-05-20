@@ -2,7 +2,6 @@
 title: 'react native Text组件首行缩进'
 date: 2019-07-18 09:47:25
 author: '非動ご'
-path: '/first-post'
 tags:
  - react
 ---
