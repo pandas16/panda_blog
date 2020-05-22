@@ -11,9 +11,12 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from './Footer'
+import Sidebar from './Sidebar'
 import "../styles/index.scss"
 
-const Layout = ({ children }) => {
+import { Row, Col } from 'reactstrap'
+
+const Layout = ({ children,pageTitle,isShowSider }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,7 +37,13 @@ const Layout = ({ children }) => {
       />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={"container"} id={"content"}>
-        <main>{children}</main>
+        {pageTitle&&<h1>{pageTitle}</h1>}
+        <Row>
+          <Col md={isShowSider?"8":"12"}>{children}</Col>
+          {isShowSider&&<Col md="4">
+            <Sidebar />
+          </Col>}
+        </Row>
       </div>
       <Footer />
     </>

@@ -5,13 +5,23 @@ import SEO from '../components/seo'
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 // import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
+import { DiscussionEmbed } from 'disqus-react'
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data,pageContext }) => {
   const post = data.markdownRemark.frontmatter
+
+  const baseUrl = 'https://gatsbytutorial.co.uk/'
+
+  const disqusShortname = 'https-gatsbytutorial-co-uk'
+  const disqusConfig = {
+    identifier: data.markdownRemark.id,
+    title: post.title,
+    url: baseUrl + pageContext.slug,
+  }
+
   return (
-    <Layout>
+    <Layout pageTitle={post.title} isShowSider={true}>
       <SEO title="Home" keywords={[`react`]} />
-      <h1>{post.title}</h1>
       <Card>
         <CardBody>
           <CardSubtitle>
@@ -32,6 +42,7 @@ const SinglePost = ({ data }) => {
           </ul>
         </CardBody>
       </Card>
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
   )
 }

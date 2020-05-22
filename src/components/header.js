@@ -24,6 +24,9 @@ const Header = ({ siteTitle }) => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
+                  <NavLink href="/tags">分类</NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink href="/about">关于</NavLink>
                 </NavItem>
               </Nav>
