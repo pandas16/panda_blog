@@ -16,7 +16,7 @@ tags:
 
 **无状态组件示例：**
 
-```JavaScript
+```javascript
 // 注意:props属性全部写在'{}'里面，也可以只传入‘props’,
 // 这里就不用写‘render’函数了
 const SubItem = ({rowData,index,updateItem}) => {
@@ -35,7 +35,7 @@ const SubItem = ({rowData,index,updateItem}) => {
 ```
 
 **完整的示例代码：**
-```JavaScript
+```javascript
 'use strict';
 import React, { Component } from 'react';
 import {
@@ -131,9 +131,11 @@ const styles = StyleSheet.create({
 ```
 
 **运行效果图如下：**
+
 ![在这里插入图片描述](https://img-blog.csdn.net/20180920111721391?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3IxMjI1NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 点击任意一项的“点我修改”按钮，通过下图可以看出，`renderRow`重绘了四次，并且`SubItem`也重新绘制了4次。但是因为`SubItem`为无状态组件，因此减少了声明周期函数的消耗。
+
 ![在这里插入图片描述](https://img-blog.csdn.net/20180920115930907?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3IxMjI1NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 上文也提到了，虽然此时是否将`renderRow`里面的组件拆分出来在效果上都是一样的，但是组件的拆分有利于降低耦合，也有利于隔离这些单元进行独立测试，因此组件的拆分对于整个软件开发的进行还是有利的。
@@ -144,7 +146,7 @@ const styles = StyleSheet.create({
 
 **PureComponent示例：** 以下将输入框组件使用`PureComponent`进行了封装。
 
-```JavaScript
+```javascript
 'use strict';
 import React, { Component } from 'react';
 import {
@@ -225,7 +227,11 @@ const styles = StyleSheet.create({
 });
 ```
 
-我们都对在输入框中输入内容，`InputItem`也没有进行重绘。**运行效果图如下：** ![在这里插入图片描述](https://img-blog.csdn.net/20180920140030979?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3IxMjI1NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+我们都对在输入框中输入内容，`InputItem`也没有进行重绘。
+
+**运行效果图如下：** 
+
+![在这里插入图片描述](https://img-blog.csdn.net/20180920140030979?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3IxMjI1NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 **控制台打印如下：** 
 

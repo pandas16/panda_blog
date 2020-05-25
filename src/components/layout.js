@@ -16,6 +16,9 @@ import "../styles/index.scss"
 
 import { Row, Col } from 'reactstrap'
 
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
+
 const Layout = ({ children,pageTitle,isShowSider }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
