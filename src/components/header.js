@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
                   <NavLink href="/tags">分类</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">关于</NavLink>
+                  <NavLink href="/about">作者</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
