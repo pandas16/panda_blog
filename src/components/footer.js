@@ -7,25 +7,25 @@ const socialList = [
   { href: "https://www.facebook.com", className: "linkedin", icon: "fab fa-2x fa-google" },
 ]
 
-const Footer = () => {
-  return (
-    <div className="site-footer">
-      <p className="text-center">联系方式</p>
-      <div className="footer-social-links">
-        <ul className="social-links-list">
-          {socialList.map((item, index) => {
-            return (
-              <li key={`socialId${index}`}>
-                <a {...item} target="_blank" rel="noopener noreferrer" >
-                  <i className={item&&item.icon}/>
-                </a>
-              </li>
-            )
-          })}
-        </ul>
+export default class Footer extends React.Component {
+  render() {
+    return (
+      <div className="site-footer">
+        <p className="text-center">联系方式</p>
+        <div className="footer-social-links">
+          <ul className="social-links-list">
+            {socialList.map((item, index) => {
+              return (
+                <li key={`socialId${index}`}>
+                  <a {...item} target="_blank" rel="noopener noreferrer" >
+                    <i className={item&&item.icon}/>
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
-  
-export default Footer
