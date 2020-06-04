@@ -2,6 +2,8 @@
 title: 'react 无状态组件与纯组件（pureComponent）'
 date: 2018-09-20 14:18:44
 author: '非動ご'
+featuredpost: false
+featuredimage: ../../images/header1.jpg
 tags:
  - react
 ---

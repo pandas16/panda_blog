@@ -8,13 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Row, Col } from 'reactstrap'
 
 import Header from "./header"
 import Footer from './footer'
 import Sidebar from './sidebar'
 import "../styles/index.scss"
-
-import { Row, Col } from 'reactstrap'
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();

@@ -10,3 +10,29 @@ ul.post-tags {
     margin-right: 10px;
   }
 }
+
+.my-card-img-box {
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5em 0 0;
+}
+
+.my-card-top {
+  flex: 3;
+}
+
+// .my-card-img {
+//   display: block;
+//   margin: 0 auto;
+//   flex-grow: 1; 
+// }
+
+.my-card-img {
+  width: auto;
+  height: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 5px;
+}

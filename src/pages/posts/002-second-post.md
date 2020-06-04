@@ -2,6 +2,8 @@
 title: 'react native关于style类型的属性(PropTypes)确认'
 date: 2019-10-24 11:58:15
 author: '非動ご'
+featuredpost: false
+featuredimage: ../../images/first-blog-img.png
 tags:
  - react
 ---
