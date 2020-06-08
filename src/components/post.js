@@ -11,7 +11,7 @@ import {
 } from 'reactstrap'
 import { Link } from 'gatsby'
 import { slugify } from '../util/utilityFunctions'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PreviewCompatibleImage from './previewCompatibleImage'
 
 const Post = ({ title, author, slug, date, body, tags, featuredimage, index }) => {
   // let fluid = featuredimage?featuredimage.childImageSharp.fluid:null
